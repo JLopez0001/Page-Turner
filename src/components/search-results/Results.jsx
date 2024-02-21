@@ -1,6 +1,6 @@
 import React from "react";
 import Book from "../book/Book";
-import "../../styles/book-styles/book.css";
+import "../../styles/results-styles/results.css";
 
 function Results({ results, searchBy }) {
   if (!results.data) {

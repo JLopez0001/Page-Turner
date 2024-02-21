@@ -1,0 +1,8 @@
+.results {
+  text-align: center;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+}

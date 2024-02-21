@@ -5,15 +5,6 @@ main {
   align-items: center;
 }
 
-.results {
-  text-align: center;
-}
-
-.results-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 #books {
   display: flex;
   margin: 50px auto;
