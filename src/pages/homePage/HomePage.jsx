@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Results from "../../components/search-results/Results";
+import Intro from "../../components/intro/Intro";
+import firstBackground from "../../assets/intro-background-img/book-background.jpeg";
 import "../../styles/home-page-styles/homePageStyles.css";
 
 function HomePage() {
   const [searchBy, setSearchBy] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const [results, setResults] = useState([]);
-  let URL = "https://openlibrary.org/search.json?";
 
-  const handleInputSearch = (e) => {
-    e.preventDefault();
-    setSearchBy(e.target.name);
-  };
+  let URL = "https://openlibrary.org/search.json?";
 
   useEffect(() => {
     // Check if there's data in localStorage
@@ -22,12 +20,18 @@ function HomePage() {
     }
   }, []);
 
-  const handleSearchChange = (e) => {
-    console.log(e.target.value);
+  //Sets state to either author or title
+  const handleSearchBy = (e) => {
+    e.preventDefault();
+    setSearchBy(e.target.name);
+  };
+
+  //Sets state to the value of what user types
+  const handleSearchInput = (e) => {
     setSearchInput(e.target.value);
   };
 
-  const onSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let temp = searchInput;
     let inputValue = temp.toLowerCase().split(" ").join("+");
@@ -43,52 +47,18 @@ function HomePage() {
 
   return (
     <div>
-      <section>
-        <div className="intro intro-container">
-          <div className="content-container">
-            <p className="content main-sub-header">
-              Welcome to Book Bank, where your next reading adventure awaits!
-              <br />
-              Happy Reading!! 📚✨
-            </p>
-          </div>
-
-          <form onSubmit={onSubmit}>
-            <div className="button-container">
-              <button
-                name="title"
-                className="input-button"
-                onClick={handleInputSearch}
-              >
-                Search by Title
-              </button>
-              <button
-                name="author"
-                className="input-button"
-                onClick={handleInputSearch}
-              >
-                Search by Author
-              </button>
-            </div>
-
-            <div className="input-container">
-              {searchBy && (
-                <div>
-                  <input
-                    className="input-search"
-                    type="text"
-                    placeholder={`Search by ${searchBy}`}
-                    onChange={handleSearchChange}
-                  />
-                  <button type="submit" className="search-button">
-                    Search
-                  </button>
-                </div>
-              )}
-            </div>
-          </form>
-        </div>
-      </section>
+      <Intro
+        mainContent={
+          "Welcome to Book Bank, where your next reading adventure awaits!"
+        }
+        subContent={"Happy Reading!! 📚✨"}
+        backgroundImg={firstBackground}
+        searchBy={searchBy}
+        searchInput={searchInput}
+        handleSearchBy={handleSearchBy}
+        handleSearchInput={handleSearchInput}
+        handleSubmit={handleSubmit}
+      />
 
       <main>
         {results && (
