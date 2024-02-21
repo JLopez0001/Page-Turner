@@ -1,0 +1,94 @@
+.intro {
+  min-height: 65vh;
+  position: relative;
+}
+
+.intro::after {
+  content: "";
+  background: url("../../../public/assets/intro-background-img/book-background.jpeg")
+    center/cover no-repeat;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.intro-container {
+  background-color: #060608;
+  opacity: 0.96;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin: 0;
+  text-shadow: 1px 1px 2px black;
+  padding: 70px;
+  opacity: 1;
+  text-align: center;
+  color: white;
+  font-size: 30.4px;
+  line-height: 2;
+  font-weight: 700;
+}
+
+/* BUTTONS */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INPUT */
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.input-button {
+  display: inline-block;
+  background-color: #ebbfa6;
+  padding: 10px;
+  width: 200px;
+  color: #353535;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin: 10px;
+  font-family: "Space Mono";
+}
+
+.input-button:hover {
+  background-color: #ebd1b2;
+}
+
+.input-search {
+  width: 300px;
+  border: 3px solid #fcdf42;
+  padding: 5px;
+  height: 30px;
+  border-radius: 15px;
+  font-family: "Space Mono";
+  outline: none;
+}
+
+.search-button {
+  cursor: pointer;
+  border-radius: 15px;
+  width: 100px;
+  height: 46px;
+  border: 1px solid;
+  background: #ebbfa6;
+}
