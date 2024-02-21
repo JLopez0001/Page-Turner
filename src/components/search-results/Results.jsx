@@ -7,8 +7,21 @@ function Results({ results, searchBy }) {
     return <div>Loading...</div>;
   }
   let { docs } = results.data;
+
+  //Displays results of books with different title not the same
+  let uniqueTitles = new Set();
+  const filteredDocs = docs.filter((book) => {
+    let title = book.title;
+
+    if (uniqueTitles.has(title)) {
+      return false; // Skip this book
+    }
+    uniqueTitles.add(title);
+    return true; // Include this book
+  });
+
   const displayLimit = searchBy === "author" ? 10 : 1;
-  const booksToDisplay = docs.slice(0, displayLimit);
+  const booksToDisplay = filteredDocs.slice(0, displayLimit);
 
   return (
     <div>
