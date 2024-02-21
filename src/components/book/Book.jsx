@@ -7,7 +7,11 @@ function Book({ coverImg, title, author, editions, firstPublished }) {
   return (
     <div id="books">
       <div className="books-container">
-        <img src={`${coverUrl}/b/id/${coverImg}-M.jpg`} />
+        {!coverImg ? (
+          <img src="https://tse3.mm.bing.net/th?id=OIP.P-nIodv7WzkQ4wYYPsXWaQAAAA&pid=Api&P=0&h=220" />
+        ) : (
+          <img src={`${coverUrl}/b/id/${coverImg}-M.jpg`} />
+        )}
         <h1 className="title">{title}</h1>
         <p className="author">
           <strong>Author:</strong> {author}
