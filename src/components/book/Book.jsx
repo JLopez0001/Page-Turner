@@ -3,7 +3,6 @@ import "../../styles/book-styles/book.css";
 
 function Book({ coverImg, title, author, editions, firstPublished }) {
   let coverUrl = "https://covers.openlibrary.org";
-
   return (
     <div id="books">
       <div className="books-container">
