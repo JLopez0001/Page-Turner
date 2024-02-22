@@ -58,6 +58,7 @@ function HomePage() {
         handleSearchBy={handleSearchBy}
         handleSearchInput={handleSearchInput}
         handleSubmit={handleSubmit}
+        page="Home"
       />
 
       <main>

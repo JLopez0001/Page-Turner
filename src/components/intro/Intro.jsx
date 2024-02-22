@@ -1,5 +1,6 @@
 function Intro(props) {
   const {
+    page,
     mainContent,
     subContent,
     backgroundImg,
@@ -9,6 +10,8 @@ function Intro(props) {
     handleSearchInput,
     handleSubmit,
   } = props;
+
+  console.log(page);
 
   return (
     <div>
@@ -24,41 +27,43 @@ function Intro(props) {
               {subContent}
             </p>
           </div>
-          <form onSubmit={handleSubmit}>
-            <div className="button-container">
-              <button
-                name="title"
-                className="input-button"
-                onClick={handleSearchBy}
-              >
-                Search by Title
-              </button>
-              <button
-                name="author"
-                className="input-button"
-                onClick={handleSearchBy}
-              >
-                Search by Author
-              </button>
-            </div>
+          {page === "Home" && (
+            <form onSubmit={handleSubmit}>
+              <div className="button-container">
+                <button
+                  name="title"
+                  className="input-button"
+                  onClick={handleSearchBy}
+                >
+                  Search by Title
+                </button>
+                <button
+                  name="author"
+                  className="input-button"
+                  onClick={handleSearchBy}
+                >
+                  Search by Author
+                </button>
+              </div>
 
-            <div className="input-container">
-              {searchBy && (
-                <div>
-                  <input
-                    className="input-search"
-                    type="text"
-                    value={searchInput}
-                    placeholder={`Search by ${searchBy}`}
-                    onChange={handleSearchInput}
-                  />
-                  <button type="submit" className="search-button">
-                    Search
-                  </button>
-                </div>
-              )}
-            </div>
-          </form>
+              <div className="input-container">
+                {searchBy && (
+                  <div>
+                    <input
+                      className="input-search"
+                      type="text"
+                      value={searchInput}
+                      placeholder={`Search by ${searchBy}`}
+                      onChange={handleSearchInput}
+                    />
+                    <button type="submit" className="search-button">
+                      Search
+                    </button>
+                  </div>
+                )}
+              </div>
+            </form>
+          )}
         </div>
       </section>
     </div>
