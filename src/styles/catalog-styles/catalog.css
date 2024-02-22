@@ -1,0 +1,42 @@
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.subject-topic {
+  font-family: Playfair;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+
+.subject-container {
+  margin-left: 40px;
+  display: flex;
+  overflow: auto;
+  width: 100vw;
+  gap: 30px;
+  margin-top: -20px;
+}
+.books-container {
+  background: white;
+  opacity: 0.91;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 265px;
+  margin: 7px;
+  height: 650px; /* Adjusted to match example */
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(1, 1, 1, 0.7);
+}
+
+#books {
+  display: flex;
+  margin: 50px auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
