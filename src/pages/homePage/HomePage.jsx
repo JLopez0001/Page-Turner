@@ -15,7 +15,6 @@ function HomePage() {
   //Sets state to either author or title
   const handleSearchBy = (e) => {
     setResults([]);
-    console.log("shit");
     e.preventDefault();
     setSearchBy(e.target.name);
   };

@@ -4,7 +4,7 @@ import "../../styles/results-styles/results.css";
 
 function Results({ results, searchBy }) {
   if (!results.data) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
   let { docs } = results.data;
 
