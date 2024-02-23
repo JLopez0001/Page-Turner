@@ -10,23 +10,27 @@ Experience "Book Bank" in action: [Book Bank Live Site](https://bookdepot.netlif
 
 **Home Page Layout:**
 
-> ![Book Bank Home Page Layout](assets/wire-frame/home-page.jpg)
+![home-page](https://github.com/JLopez0001/Page-Turner/assets/142369290/62d23412-66ef-4e3b-a64a-931611dd8ed1)
 
 **_Mobile Home Page Layout:_**
 
-> ![Book Bank Home Page Layout](assets/wire-frame/home-page-M.jpg)
+![home-page-M](https://github.com/JLopez0001/Page-Turner/assets/142369290/06e264c1-7527-43b0-977d-56ddd7ed5cd9)
+
 
 **Catalog Page Layout:**
 
-> ![Book Bank Catalog Page Layout](assets/wire-frame/catalog-page.jpg)
+![catalog-page](https://github.com/JLopez0001/Page-Turner/assets/142369290/3f39373d-dcb9-44ea-8d2f-be8a7b1f76fb)
+
 
 **_Mobile Catalog Page Layout:_**
 
-> ![Book Bank Home Page Layout](assets/wire-frame/catalog-page-M.jpg)
+![catalog-page-M](https://github.com/JLopez0001/Page-Turner/assets/142369290/6502d345-23ff-452d-880f-279c7c8a317a)
+
 
 **Book Detail Page Layout:**
 
-> ![Book Bank Home Page Layout](assets/wire-frame/Book-detail-page.jpg)
+![Book-detail-page](https://github.com/JLopez0001/Page-Turner/assets/142369290/b5dfc2b2-259f-4f47-83ce-ca4e971279a8)
+
 
 ## Features
 
