@@ -12,9 +12,12 @@ function Book({ keyId, coverImg, title, author, editions, firstPublished }) {
       {/* {console.log(keyId)} */}
       <div className="books-container">
         {!coverImg ? (
-          <img src="https://tse3.mm.bing.net/th?id=OIP.P-nIodv7WzkQ4wYYPsXWaQAAAA&pid=Api&P=0&h=220" />
+          <img
+            className="image"
+            src="https://tse3.mm.bing.net/th?id=OIP.P-nIodv7WzkQ4wYYPsXWaQAAAA&pid=Api&P=0&h=220"
+          />
         ) : (
-          <img src={`${coverUrl}/b/id/${coverImg}-M.jpg`} />
+          <img className="image" src={`${coverUrl}/b/id/${coverImg}-M.jpg`} />
         )}
         <h1 className="title">{truncatedTitle}</h1>
         <p className="author">
@@ -26,9 +29,11 @@ function Book({ keyId, coverImg, title, author, editions, firstPublished }) {
         <p className="publish">
           <strong>First Published:</strong> {firstPublished};
         </p>
-        <Link to={`/book${keyId}`}>
+      </div>
+      <div className="link">
+        <Link className="link-button" to={`/book${keyId}`}>
           {console.log(keyId)}
-          <button>More Info</button>
+          <button className="info-button">More Info</button>
         </Link>
       </div>
     </div>

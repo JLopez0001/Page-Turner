@@ -36,7 +36,10 @@ function BookDetails() {
         <div className="book-details">
           <div className="cover-image">
             {bookData.covers ? (
-              <img src={`${coverUrl}/b/id/${bookData.covers[0]}-L.jpg`} />
+              <img
+                className="book-image-detail"
+                src={`${coverUrl}/b/id/${bookData.covers[0]}-L.jpg`}
+              />
             ) : (
               <img
                 className="no-cover"

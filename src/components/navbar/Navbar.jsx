@@ -1,9 +1,17 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../../styles/navbar-styles/navbar.css";
 
 function Navbar() {
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState("");
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    console.log(pathname.split("/"));
+    const currentPath = pathname.split("/")[1];
+    setActiveLink(currentPath ? currentPath : "home");
+  }, []);
 
   return (
     <header>
