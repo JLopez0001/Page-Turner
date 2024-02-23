@@ -27,9 +27,14 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-
   align-items: center;
 }
 .cpage {
   height: 100%;
+}
+
+@media (max-width: 487px) {
+  .subject-container {
+    width: 90%;
+  }
 }

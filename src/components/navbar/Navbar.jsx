@@ -19,7 +19,7 @@ function Navbar() {
         <Link to="/" onClick={() => setActiveLink("home")}>
           <div className="header-container">
             <i class="fa-solid fa-book-skull fa-2xl"></i>
-            <h1>Page Turner</h1>
+            <h1>Book Depot</h1>
           </div>
         </Link>
 

@@ -11,7 +11,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   padding: 50px;
   width: 1000px;
   margin: 40px;
@@ -36,4 +35,17 @@
 
 .book-image-detail {
   height: 600px;
+}
+
+@media (max-width: 519px) {
+  .book-image-detail {
+    width: 270px;
+    height: 500px;
+  }
+  .book-detail-container {
+    width: 80%px;
+  }
+  .book-details {
+    width: 300px;
+  }
 }
