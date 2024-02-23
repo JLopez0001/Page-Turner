@@ -12,16 +12,10 @@ function HomePage() {
 
   let URL = "https://openlibrary.org/search.json?";
 
-  useEffect(() => {
-    // Check if there's data in localStorage
-    const savedResults = localStorage.getItem("searchResults");
-    if (savedResults) {
-      setResults(JSON.parse(savedResults));
-    }
-  }, []);
-
   //Sets state to either author or title
   const handleSearchBy = (e) => {
+    setResults([]);
+    console.log("shit");
     e.preventDefault();
     setSearchBy(e.target.name);
   };
@@ -46,7 +40,7 @@ function HomePage() {
   };
 
   return (
-    <div>
+    <div className="page">
       <Intro
         mainContent={
           "Welcome to Book Bank, where your next reading adventure awaits!"
