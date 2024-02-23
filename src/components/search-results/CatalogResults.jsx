@@ -46,16 +46,19 @@ function CatalogResults() {
     <div>
       {subjectData.map((subject, index) => (
         <div key={index}>
+          {console.log(subject)}
           <h2 className="subject-topic">
             {subject.name.charAt(0).toUpperCase() + subject.name.slice(1)}
           </h2>
           <div className="subject-container">
             {subject.works.map((bookInfo, index) => (
+              // console.log(bookInfo.key)
               <Book
                 key={index}
+                keyId={bookInfo.key}
                 coverImg={bookInfo.cover_id}
                 title={bookInfo.title}
-                author={bookInfo.authors[0]?.name} // Optional chaining for safety
+                author={bookInfo.authors[0]?.name}
                 editions={bookInfo.edition_count}
                 firstPublished={bookInfo.first_publish_year}
               />

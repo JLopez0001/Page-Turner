@@ -1,0 +1,35 @@
+.book-detail-container {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.book-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 50px;
+  width: 1000px;
+  margin: 40px;
+  background-color: bisque;
+}
+
+.cover-image {
+  display: flex;
+  justify-content: center;
+}
+
+.no-cover {
+  height: 500px;
+}
+
+.book-title {
+  line-height: 55px;
+
+  text-align: center;
+  font-size: 45px;
+}
